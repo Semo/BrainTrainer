@@ -29,7 +29,7 @@ public class Person {
 	@Column(name = "Forename")
 	private String firstName;
 
-	@Field(index = Index.YES, store = Store.NO)
+	@Field(index = Index.TOKENIZED, store = Store.NO)
 	@Column(name = "Surname")
 	private String lastname;
 

@@ -18,7 +18,7 @@ public class PersonService {
 
 	public ModelAndView buildListView(List<Person> persons) {
 		
-		//empty Person to create new Person
+		//empty Person Object to create new Person
 		Person newPerson = new Person();
 		
 		ModelAndView mv = new ModelAndView("Person");

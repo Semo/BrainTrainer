@@ -7,11 +7,13 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import de.bht.mme2.domain.Person;
 import de.bht.mme2.service.PersonService;
 
+@Repository
 public class PersonDao {
 
 	@Autowired
@@ -37,7 +39,7 @@ public class PersonDao {
 
 	@SuppressWarnings("unchecked")
 	public List<Person> getAllPersons() {
-		Query q = entityManager.createQuery("select * from Person");
+		Query q = entityManager.createQuery("select * from Person;");
 		return q.getResultList();
 	}
 
