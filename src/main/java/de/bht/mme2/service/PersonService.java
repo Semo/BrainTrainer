@@ -14,7 +14,7 @@ import de.bht.mme2.domain.Person;
 @Service
 public class PersonService {
 
-	private static final Logger logger = LoggerFactory.getLogger(PersonService.class);
+	private Logger logger = LoggerFactory.getLogger(PersonService.class);
 
 	public ModelAndView buildListView(List<Person> persons) {
 		
@@ -38,10 +38,10 @@ public class PersonService {
 		return null;
 	}
 	
-	public String convertJson(List<String> vals) {
-		Gson gson = new Gson();
-		logger.info("JSON-Objekt ist " + gson.toJson(vals));
-		return gson.toJson(vals);
-	}
+//	public String convertJson(List<String> vals) {
+//		Gson gson = new Gson();
+//		logger.info("JSON-Objekt ist " + gson.toJson(vals));
+//		return gson.toJson(vals);
+//	}
 	
 }

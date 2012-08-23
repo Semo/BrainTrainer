@@ -1,7 +1,5 @@
 package de.bht.mme2.domain;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -34,16 +32,16 @@ public class Person {
 	private String lastname;
 
 	@Column(name = "Birthdate")
-	private Date birthDate;
+	private String birthDate;
 
 	@Column(name = "TotalScore")
-	private int totalScore;
+	private Integer totalScore;
 
 	@Column(name = "ReactionTime")
-	private int reactionTime;
+	private Integer reactionTime;
 
 	@Column(name = "Visits")
-	private int visits;
+	private Integer visits;
 
 	public long getID() {
 		return id;
@@ -61,7 +59,7 @@ public class Person {
 		return lastname;
 	}
 
-	public final Date getBirthDate() {
+	public final String getBirthDate() {
 		return birthDate;
 	}
 
@@ -93,7 +91,7 @@ public class Person {
 		this.lastname = lastname;
 	}
 
-	public final void setBirthDate(Date birthDate) {
+	public final void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 

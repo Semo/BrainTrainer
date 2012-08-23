@@ -39,7 +39,7 @@ public class PersonDao {
 
 	@SuppressWarnings("unchecked")
 	public List<Person> getAllPersons() {
-		Query q = entityManager.createQuery("select * from Person;");
+		Query q = entityManager.createQuery("from Person");
 		return q.getResultList();
 	}
 

@@ -20,8 +20,8 @@ import de.bht.mme2.service.PersonService;
 @Controller
 @RequestMapping
 public class PersonController {
-
-	private static final Logger logger = LoggerFactory.getLogger(PersonController.class);
+	
+	private Logger logger = LoggerFactory.getLogger(PersonController.class);
 	
 	@Autowired
 	private PersonDao personDao;
