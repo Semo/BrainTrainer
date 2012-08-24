@@ -192,6 +192,16 @@
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>1.6.6</version>
 		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<repositories>

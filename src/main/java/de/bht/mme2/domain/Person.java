@@ -43,6 +43,19 @@ public class Person {
 	@Column(name = "Visits")
 	private Integer visits;
 
+	public Person(String gender, String firstName, String lastname, String birthDate, Integer totalScore,
+			Integer reactionTime, Integer visits) {
+		this.gender = gender;
+		this.firstName = firstName;
+		this.lastname = lastname;
+		this.birthDate = birthDate;
+		this.totalScore = totalScore;
+		this.reactionTime = reactionTime;
+		this.visits = visits;
+	}
+
+	public Person() {}
+	
 	public long getID() {
 		return id;
 	}

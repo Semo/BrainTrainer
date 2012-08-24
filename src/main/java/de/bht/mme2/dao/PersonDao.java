@@ -14,6 +14,7 @@ import de.bht.mme2.domain.Person;
 import de.bht.mme2.service.PersonService;
 
 @Repository
+@Transactional
 public class PersonDao {
 
 	@Autowired

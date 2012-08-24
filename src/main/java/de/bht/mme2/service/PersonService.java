@@ -7,8 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.gson.Gson;
-
 import de.bht.mme2.domain.Person;
 
 @Service

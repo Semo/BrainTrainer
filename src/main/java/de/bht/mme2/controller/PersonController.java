@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import de.bht.mme2.dao.PersonDao;
 import de.bht.mme2.domain.Person;
 import de.bht.mme2.service.PersonService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/person/")
 public class PersonController {
 	
 	private Logger logger = LoggerFactory.getLogger(PersonController.class);
@@ -29,11 +29,13 @@ public class PersonController {
 	@Autowired
 	private PersonService personService;
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/person/")
-	public ModelAndView getAllPersons() {
+	@RequestMapping(method = RequestMethod.GET)
+	@ResponseBody 
+	public Person[] getAllPersons() {
 		List<Person> list = personDao.getAllPersons();
 		logger.info("Es sind " + list.size() + " Personen in der Datenbank.");
-		return personService.buildListView(list);
+//		System.out.println(list.toArray(new Person[0])[0]);
+		return list.toArray(new Person[0]);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/person/add")
