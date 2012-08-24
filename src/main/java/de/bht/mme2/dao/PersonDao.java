@@ -44,4 +44,8 @@ public class PersonDao {
 		return q.getResultList();
 	}
 
+	public Person getPersonById(Long id) {
+		return personService.findPersonByID(this.getAllPersons(), id);
+	}
+
 }

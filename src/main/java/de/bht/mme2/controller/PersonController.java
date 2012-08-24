@@ -34,8 +34,15 @@ public class PersonController {
 	public Person[] getAllPersons() {
 		List<Person> list = personDao.getAllPersons();
 		logger.info("Es sind " + list.size() + " Personen in der Datenbank.");
-//		System.out.println(list.toArray(new Person[0])[0]);
 		return list.toArray(new Person[0]);
+	}
+	
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
+	@ResponseBody
+	public Person getPersonById(@PathVariable Long id){
+		logger.info("Person mit der ID " + id + " in der Datenbank gesucht.");
+		Person p = personDao.getPersonById(id);
+		return p;
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/person/add")
