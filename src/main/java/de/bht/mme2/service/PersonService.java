@@ -5,10 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.google.gson.Gson;
 
 import de.bht.mme2.domain.Person;
 
@@ -38,11 +35,4 @@ public class PersonService {
 		}
 		return null;
 	}
-	
-//	public String convertJson(List<String> vals) {
-//		Gson gson = new Gson();
-//		logger.info("JSON-Objekt ist " + gson.toJson(vals));
-//		return gson.toJson(vals);
-//	}
-	
 }
