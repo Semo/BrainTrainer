@@ -44,29 +44,17 @@ public class PersonController {
 		return p;
 	}
 
-	
 	@RequestMapping(method = RequestMethod.PUT)
 	@ResponseBody
-	public Person addPerson(@RequestBody Person person){
+	public Person addPerson(@RequestBody Person person) {
 		logger.info("Person angelegt: " + person.toString());
 		personDao.addPerson(person);
 		return person;
 	}
-	
-//	@formatter:off
-//	@RequestMapping(method = RequestMethod.POST, value = "/person/add")
-//	public String addPerson(@ModelAttribute("person") Person person, BindingResult result){
-//		logger.info("Person angelegt: " + person.toString());
-//		personDao.addPerson(person);
-//		return "redirect:/";
-//	}
-//	@formatter:on
 
-	@RequestMapping(method = RequestMethod.DELETE, value = "/person/delete/{id}")
-	public String deletePerson(@PathVariable("id") long id) {
+	@RequestMapping(method = RequestMethod.DELETE)
+	public void deletePerson(@RequestBody long id) {
 		logger.info("Lösche Person mit ID: " + id);
 		personDao.deletePerson(id);
-		return "redirect:/";
 	}
-
 }

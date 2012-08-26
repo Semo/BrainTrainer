@@ -29,7 +29,7 @@ public class PersonDao {
 	}
 
 	@Transactional
-	public Boolean deletePerson(long id) {
+	public Boolean deletePerson(Long id) {
 		Person deleteMe = personService.findPersonByID(this.getAllPersons(), id);
 		if (deleteMe != null) {
 			entityManager.remove(deleteMe);
