@@ -23,16 +23,11 @@ public class GameDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
-	@SuppressWarnings("unchecked")
-	public List<Game> getAllGames() {
-		Query q = entityManager.createQuery("from Game");
-		return q.getResultList();
+	@Transactional
+	public void addGame(Game game) {
+		entityManager.merge(game);
 	}
 
-	public Game getGameById(Long id) {
-		return gameService.findGameByID(this.getAllGames(), id);
-	}
-	
 	@Transactional
 	public Boolean deleteGame(Long id) {
 		Game deleteMe = gameService.findGameByID(this.getAllGames(), id);
@@ -43,8 +38,13 @@ public class GameDao {
 		return false;
 	}
 
-	@Transactional
-	public void addGame(Game game) {
-		entityManager.merge(game);
+	@SuppressWarnings("unchecked")
+	public List<Game> getAllGames() {
+		Query q = entityManager.createQuery("from Game");
+		return q.getResultList();
+	}
+
+	public Game getGameById(Long id) {
+		return gameService.findGameByID(this.getAllGames(), id);
 	}
 }
