@@ -17,6 +17,8 @@ import de.bht.mme2.service.GameService;
 @Transactional
 public class GameDao {
 
+	//Launchpad PWD LKJBSzu567D
+	
 	@Autowired
 	private GameService gameService;
 	
@@ -41,6 +43,12 @@ public class GameDao {
 	@SuppressWarnings("unchecked")
 	public List<Game> getAllGames() {
 		Query q = entityManager.createQuery("from Game");
+		return q.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Game> getActiveGames() {
+		Query q = entityManager.createQuery("from Game where isActive = true");
 		return q.getResultList();
 	}
 

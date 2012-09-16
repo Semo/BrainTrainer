@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+
+	<!-- <application>     
+		<el-resolver>
+    		    org.springframework.web.jsf.el.SpringBeanFacesELResolver
+    	</el-resolver>
+  	</application>
+  	
+  	<managed-bean>
+		<managed-bean-name>adminController</managed-bean-name>
+		<managed-bean-class>de.bht.mme2.controller.AdministrationController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	<managed-property>
+		<property-name>person</property-name>
+		<property-class>de.bht.mme2.domain.Person</property-class>
+		<value>#{person}</value>
+    </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>person</managed-bean-name>
+		<managed-bean-class>de.bht.mme2.domain.Person</managed-bean-class>
+		<managed-bean-scope>none</managed-bean-scope>
+	</managed-bean> -->
+
+</faces-config>
